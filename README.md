@@ -1,6 +1,6 @@
 # Artisttree
 
-#### By _**Jamila Aliyeva, Manya Jain, Amy Nguyen and Annie Lui**_
+#### By _**Jamila Aliyeva, Manya Jain, Annie Liu, Amy Nguyen**_
 
 ## Description
 A React based application aimed to allow fashion design crafters to exchange different skill sets and connect people interested in similar creative fields as them.
@@ -26,14 +26,14 @@ _Please contact any of the following people with questions and comments at the p
 
 | Name | Email | 
 |---|---|
-| Amy Nguyen | Amyn27@uw.edu |
-| Jamila Aliyeva | Aliyeva852@gmail.com | 
-| Manya Jain | Manyaj57@gmail.com | 
-| Annie Liu| Annieliu@uw.edu  |
+| Amy Nguyen | amyn27@uw.edu |
+| Jamila Aliyeva | aliyeva852@gmail.com | 
+| Manya Jain | manyaj57@gmail.com | 
+| Annie Liu| annieliu@uw.edu  |
 
 
 ### MIT License
-Copyright (c) 2022 Jamila Aliyeva, Manya Jain, Amy Nguyen and Annie Lui
+Copyright (c) 2022 Jamila Aliyeva, Manya Jain, Annie Liu, Amy Nguyen
 
 *Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
