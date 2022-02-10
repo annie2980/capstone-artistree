@@ -9,9 +9,10 @@ A React based application aimed to allow fashion design crafters to exchange dif
 1. Open https://github.com/annie2980/capstone-artisttree
 2. Clone repository to local machine 
 3. Navigate to the project directory 
-4. `npm start` to run the app in development mode
-5. If browser does not load automatically, open [http://localhost:3000](http://localhost:3000) to view running app in browser.
-6. `npm run build` builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+4. `npm install` to download the necessary packages
+5. `npm start` to run the app in development mode
+6. If browser does not load automatically, open [http://localhost:3000](http://localhost:3000) to view running app in browser.
+7. `npm run build` builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ## Known Bugs
 * No known bugs at this time.
