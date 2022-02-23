@@ -5,9 +5,17 @@ import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
 function App() {
   return (
     <div>
-      hi
+      <NavBar />
     </div>
   );
+}
+
+function NavBar() {
+  return(
+    <div>
+      <img src="img/home-light.png" alt="home icon"/>
+    </div>
+  )
 }
 
 export default App;
