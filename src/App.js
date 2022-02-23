@@ -3,10 +3,12 @@ import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
 import { AppBar, Toolbar, IconButton, BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
 import { HomeOutlined, SearchOutlined, ChatBubbleOutline, PersonOutline } from '@mui/icons-material'
+import Auth from './component/auth/Auth';
 
 function App() {
   return (
     <div>
+      <Auth/>
       <NavigationBar />
     </div>
   );
@@ -14,6 +16,7 @@ function App() {
 
 function NavigationBar() {
   return(
+    
     // <AppBar position="fixed" color="background" sx={{ top: 'auto', bottom: 0 }}>
     //   <Toolbar>
     //     <IconButton>
