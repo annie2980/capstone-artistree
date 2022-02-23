@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from "../../database/firebase"
-
+import { getFirestore, collection, setDoc, doc} from 'firebase/firestore';
 
 const Register = () => {
   const emailRef = useRef();
@@ -17,6 +17,15 @@ const Register = () => {
     if (email && password && name){
         createUserWithEmailAndPassword(auth, email, password)
         .then((result) =>{
+            const user = auth.currentUser.uid;
+            setDoc(doc(db, "users", user), {
+                email: email,
+                name: name,
+                password: password,
+                uid: user
+              });
+            console.log(user);
+            
             console.log(result)
         }) 
         .catch((error) => {
