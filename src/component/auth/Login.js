@@ -32,7 +32,6 @@ const Login = () => {
   };
 
   return (
-
     <div className="container">
     <div className="form">
       <h2> Login </h2>

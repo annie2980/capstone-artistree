@@ -1,20 +1,28 @@
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
+import fb from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
+import "firebase/compat/storage";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"
 
 
-const firebaseConfig = {
-    apiKey: "AIzaSyChSTZTgD2M0qWt9fFr6zf9lCiHf_nFnBw",
-    authDomain: "artistree-d4b5b.firebaseapp.com",
-    projectId: "artistree-d4b5b",
-    storageBucket: "artistree-d4b5b.appspot.com",
-    messagingSenderId: "169621638063",
-    appId: "1:169621638063:web:a3b7b77aa7081679cffd5a",
-    measurementId: "G-ZPTGSPBCK7"
-  };
-  
-  export const app = initializeApp(firebaseConfig);
-  export const analytics = getAnalytics(app);
-  export const db = getFirestore();
-  export const auth = getAuth(app);
+const firebaseApp = fb.initializeApp({
+  apiKey: "AIzaSyAGpw6YkyfE7mIuA_bPXup3bsIFWesXL9s",
+  authDomain: "test-6dfd5.firebaseapp.com",
+  projectId: "test-6dfd5",
+  storageBucket: "test-6dfd5.appspot.com",
+  messagingSenderId: "499387571279",
+  appId: "1:499387571279:web:b0ec44bb78999df99a5e3a",
+  measurementId: "G-LZ9VYHZSGG"
+});
+
+const db = firebaseApp.firestore();
+const auth = fb.auth();
+const storage = fb.storage();
+
+//  const app = initializeApp(firebaseConfig);
+//  const analytics = getAnalytics(app);
+//  const db = getFirestore();
+//  const auth = getAuth(app);
+
+export { db, auth, storage, fb };

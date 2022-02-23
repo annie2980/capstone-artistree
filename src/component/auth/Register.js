@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useRef, useEffect} from "react";
+import { createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth, db} from "../../database/firebase"
 import { getFirestore, collection, setDoc, doc} from 'firebase/firestore';
 
@@ -22,12 +22,15 @@ const Register = () => {
                 email: email,
                 name: name,
                 password: password,
-                uid: user
+                uid: user,
               });
+              updateProfile(auth.currentUser, {
+                displayName: name
+              })
             console.log(user);
             
             console.log(result)
-        }) 
+        })       
         .catch((error) => {
             console.log(error)
         })
