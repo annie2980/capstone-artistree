@@ -1,20 +1,35 @@
 import React from 'react';
-import {Route, Switch, Redirect, NavLink} from 'react-router-dom';
+import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
+import { AppBar } from '@mui/material'
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavigationBar />
     </div>
   );
 }
 
-function NavBar() {
+function NavigationBar() {
   return(
-    <div>
-      <img src="img/home-light.png" alt="home icon"/>
-    </div>
+    // <Nav justify>
+    //   <Nav.Item>
+    //     <img src="img/home-light.png" alt="home icon"/>
+    //   </Nav.Item>
+    //   <Nav.Item>
+    //     <img src="img/home-light.png" alt="home icon"/>
+    //   </Nav.Item>
+    //   <Nav.Item>
+    //     <img src="img/home-light.png" alt="home icon"/>
+    //   </Nav.Item>
+    //   <Nav.Item>
+    //     <img src="img/home-light.png" alt="home icon"/>
+    //   </Nav.Item>
+    // </Nav>
+    <AppBar position="fixed" color="primary">
+
+    </AppBar>
   )
 }
 
