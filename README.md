@@ -1,4 +1,4 @@
-# Artisttree
+# Artistree
 
 #### By _**Jamila Aliyeva, Manya Jain, Annie Liu, and Amy Nguyen**_
 
@@ -6,7 +6,7 @@
 A React based application aimed to allow fashion design crafters to exchange different skill sets and connect people interested in similar creative fields as them.
 
 ## Deployment/Installation Requirements
-1. Open https://github.com/annie2980/capstone-artisttree
+1. Open https://github.com/annie2980/capstone-artistree
 2. Clone repository to local machine 
 3. Navigate to the project directory 
 4. `npm install` to download the necessary packages
