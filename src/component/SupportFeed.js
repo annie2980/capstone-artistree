@@ -17,6 +17,17 @@ function SupportFeed(props) {
           imageUrl={post.imageUrl}
         />
       ))}
+      <br />
+      <div className="flex-container">
+        <section className="col c1">
+        <div className="card-container">
+          <div className="card-item" id="post2">
+            <img src="../img/sewing.png" alt="Help setting up sewing machine" />
+          </div>
+        </div>
+        </section>
+    </div>
+    <br />
     </div>
   )
 }

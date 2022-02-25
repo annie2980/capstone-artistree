@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.card-item {
+  flex: 0 0 250px;
+  margin: .5rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-item img, .post__image {
+  border-radius: 20px;
+}

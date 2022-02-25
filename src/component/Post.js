@@ -50,7 +50,16 @@ function Post({ postId, user, username, caption, imageUrl }) {
       </div>
 
       {/* Image */}
-      <img className="post__image" src={imageUrl} alt="" />
+      <div className="flex-container">
+        <section className="col c1">
+        <div className="card-container">
+          <div className="card-item">
+          <img src={imageUrl} className="post__image" alt="" />
+          </div>
+        </div>
+        </section>
+    </div>
+      {/* <img className="post__image" src={imageUrl} alt="" /> */}
 
       {/* Username + caption */}
       <h4 className="post__text">
