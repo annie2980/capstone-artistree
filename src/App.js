@@ -54,8 +54,8 @@ function App() {
         <main>
           <div>
             <Switch>
-              <Route exact path="/feed"> <SupportFeed /> </Route>
-              <Route path="/profile"> <Profile /> </Route>
+              <Route exact path="/feed"> <SupportFeed auth={auth} posts={posts}/> </Route>
+              <Route path="/profile"> <Profile auth={auth} /> </Route>
               <Redirect to="/feed" />
             </Switch>
           </div>
@@ -69,10 +69,10 @@ function App() {
 
   return (
     <div>
-      {/* Move this to profile */}
+      {/* Moved this to Profile.js and SupportFeed.js */}
       <div className="timeline">
-        {auth.currentUser && <ImageUpload user={auth.currentUser} />}
-        {posts.map(({ id, post }) => (
+        {/* {auth.currentUser && <ImageUpload user={auth.currentUser} />} */}
+        {/* {posts.map(({ id, post }) => (
           <Post
             key={id}
             postId={id}
@@ -81,7 +81,7 @@ function App() {
             caption={post.caption}
             imageUrl={post.imageUrl}
           />
-        ))}
+        ))} */}
       </div>
       {content}
     </div>
@@ -90,22 +90,6 @@ function App() {
 
 function NavigationBar() {
   return(
-    // <AppBar position="fixed" color="background" sx={{ top: 'auto', bottom: 0 }}>
-    //   <Toolbar>
-    //     <IconButton>
-    //       <HomeOutlined />
-    //     </IconButton>
-    //     <IconButton>
-    //       <SearchOutlined />
-    //     </IconButton>
-    //     <IconButton>
-    //       <ChatBubbleOutline />
-    //     </IconButton>
-    //     <IconButton>
-    //       <PersonOutline />
-    //     </IconButton>
-    //   </Toolbar>
-    // </AppBar>
     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
       <BottomNavigation >
         <BottomNavigationAction label="Home" icon={<HomeOutlined />} component={Link} to="/feed" />
