@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import { Route, Switch, Redirect, Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
 import { AppBar, Toolbar, IconButton, BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
 import { HomeOutlined, SearchOutlined, ChatBubbleOutline, PersonOutline } from '@mui/icons-material'
 import Auth from './component/auth/Auth';
-import Post from './component/Post'
+import Post from './component/Post';
+import Profile from './component/Profile';
+import SupportFeed from './component/SupportFeed';
 import ImageUpload from '../src/component/imageUpload/ImageUpload';
 import {db, auth} from '../src/database/firebase'
 
@@ -40,8 +42,34 @@ function App() {
       });
   }, []);
 
+  let content = null
+
+  if (user == null) { // if logged out, show login form
+    content = (
+      <Auth />
+    )
+  } else {
+    content = (
+      <div>
+        <main>
+          <div>
+            <Switch>
+              <Route exact path="/feed"> <SupportFeed /> </Route>
+              <Route path="/profile"> <Profile /> </Route>
+              <Redirect to="/feed" />
+            </Switch>
+          </div>
+        </main>
+        <div> 
+          <NavigationBar />
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
+      {/* Move this to profile */}
       <div className="timeline">
         {auth.currentUser && <ImageUpload user={auth.currentUser} />}
         {posts.map(({ id, post }) => (
@@ -55,15 +83,13 @@ function App() {
           />
         ))}
       </div>
-      <Auth/>
-      <NavigationBar />
+      {content}
     </div>
   );
 }
 
 function NavigationBar() {
   return(
-    
     // <AppBar position="fixed" color="background" sx={{ top: 'auto', bottom: 0 }}>
     //   <Toolbar>
     //     <IconButton>
@@ -82,10 +108,10 @@ function NavigationBar() {
     // </AppBar>
     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
       <BottomNavigation >
-        <BottomNavigationAction label="Home" icon={<HomeOutlined />} />
+        <BottomNavigationAction label="Home" icon={<HomeOutlined />} component={Link} to="/feed" />
         <BottomNavigationAction label="Search" icon={<SearchOutlined />} />
         <BottomNavigationAction label="Message" icon={<ChatBubbleOutline />} />
-        <BottomNavigationAction label="User" icon={<PersonOutline />} />
+        <BottomNavigationAction label="User" icon={<PersonOutline />} component={Link} to="/profile" />
       </BottomNavigation>
     </Paper>
   )
