@@ -39,16 +39,6 @@ function Post({ postId, user, username, caption, imageUrl }) {
 
   return (
     <div className="post">
-      <div className="post__header">
-        {/* Header - avatar with username */}
-        <Avatar
-          className="post__avatar"
-          alt={username}
-          src="/static/images/avatar/1.jpg"
-        />
-        <h3>{username}</h3>
-      </div>
-
       {/* Image */}
       <div className="flex-container">
         <section className="col c1">
@@ -59,7 +49,15 @@ function Post({ postId, user, username, caption, imageUrl }) {
         </div>
         </section>
     </div>
-      {/* <img className="post__image" src={imageUrl} alt="" /> */}
+    
+    <div className="post__header">
+      {/* Header - avatar with username */}
+      <Avatar
+        className="post__avatar"
+        alt={username}
+        src="/static/images/avatar/1.jpg"/>
+      <h3>{username}</h3>
+    </div>
 
       {/* Username + caption */}
       <h4 className="post__text">

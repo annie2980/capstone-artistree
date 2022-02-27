@@ -1,12 +1,18 @@
 import React from 'react';
 import Post from './Post';
+import { NavLink } from 'react-router-dom';
 
 function SupportFeed(props) {
   const {auth, posts} = props;
 
   return (
     <div>
-      This is the Support Feed
+      {/* This is the Support Feed */}
+      <nav className="navbar headerNav fixed-top">
+        <NavLink to='/Community' className="nav-link" activeClassName={"activeLink"}>Community</NavLink>
+        <NavLink exact to='/SupportFeed' className="nav-link" activeClassName={"activeLink"}>Support</NavLink>
+      </nav>
+      <hr className="breakLine"/>
       {posts.map(({ id, post }) => (
         <Post
           key={id}
@@ -17,17 +23,6 @@ function SupportFeed(props) {
           imageUrl={post.imageUrl}
         />
       ))}
-      <br />
-      <div className="flex-container">
-        <section className="col c1">
-        <div className="card-container">
-          <div className="card-item" id="post2">
-            <img src="../img/sewing.png" alt="Help setting up sewing machine" />
-          </div>
-        </div>
-        </section>
-    </div>
-    <br />
     </div>
   )
 }
