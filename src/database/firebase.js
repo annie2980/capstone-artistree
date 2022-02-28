@@ -2,7 +2,7 @@ import fb from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 import "firebase/compat/storage";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"
 
 
@@ -16,6 +16,11 @@ const firebaseApp = fb.initializeApp({
   measurementId: "G-LZ9VYHZSGG"
 });
 
+
+const logoutUser = () => {
+  signOut(auth);
+};
+
 const db = firebaseApp.firestore();
 const auth = fb.auth();
 const storage = fb.storage();
@@ -25,4 +30,4 @@ const storage = fb.storage();
 //  const db = getFirestore();
 //  const auth = getAuth(app);
 
-export { db, auth, storage, fb };
+export { db, auth, storage, fb, logoutUser };

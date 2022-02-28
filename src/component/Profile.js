@@ -8,6 +8,7 @@ function Profile(props) {
     <div>
       This is where the Profile will be
       {auth.currentUser && <ImageUpload user={auth.currentUser} />}
+      {}
     </div>
   )
 }
