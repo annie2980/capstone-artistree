@@ -8,7 +8,7 @@ import Post from './component/Post';
 import Profile from './component/Profile';
 import SupportFeed from './component/SupportFeed';
 import ImageUpload from '../src/component/imageUpload/ImageUpload';
-import {db, auth} from '../src/database/firebase'
+import {db, auth, logoutUser} from '../src/database/firebase'
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -61,6 +61,15 @@ function App() {
             </Switch>
           </div>
         </main>
+        <div>
+        <button
+              className="comment__button text__button"
+              onClick={logoutUser}
+              type="submit"
+            >
+              Logout
+            </button>
+        </div>
         <div> 
           <NavigationBar />
         </div>

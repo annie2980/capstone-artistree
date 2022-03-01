@@ -33,9 +33,6 @@ function Profile(props) {
   } else {
     interests = ""
   }
-
-
-
   return (
     <div>
       This is where the Profile will be
