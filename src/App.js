@@ -14,6 +14,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [user, setUser] = useState(null);
 
+
   useEffect(() => {
     // listens to auth-based changes
     auth.onAuthStateChanged((authUser) => {
