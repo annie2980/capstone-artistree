@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { Route, Switch, Redirect, Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
-import { AppBar, Toolbar, IconButton, BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
+import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
 import { HomeOutlined, SearchOutlined, ChatBubbleOutline, PersonOutline } from '@mui/icons-material'
+import SplashScreen from './component/onboarding/SplashScreen';
 import Auth from './component/auth/Auth';
 import Post from './component/Post';
 import Profile from './component/Profile';
@@ -48,6 +48,7 @@ function App() {
   if (user == null) { // if logged out, show login form
     content = (
       <Auth />
+      // <SplashScreen />
     )
   } else {
     content = (

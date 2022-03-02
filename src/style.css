@@ -4,6 +4,7 @@ html {
 
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .flex-container {
@@ -27,4 +28,31 @@ html {
 
 .card-item img, .post__image {
   border-radius: 20px;
+}
+
+.logo {
+  display: block;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 90%;
+}
+
+.login-word {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.signin-button {
+  color: #AECE94;
+}
+
+.splash-screen img {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  display: block;
+  justify-content: center;
 }
