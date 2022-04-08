@@ -6,7 +6,7 @@ export default function Homepage() {
   return (
     <div>
       <main>
-        <div id="Home" className="container tabContent">
+      <div id="Home" className="container tabContent">
         <h2>Artistree</h2>
         <h3>[ar-tist-tre] noun</h3>
           <p>A mobile application that connects fashion creatives, provides community support and resources, and encourages people to share their progress and achievements.
@@ -35,14 +35,16 @@ export default function Homepage() {
         </div>
           <hr className="breakLine"/>
         <div className="video">
-          <h2>Demo Video</h2>
+          <h2 className="center-h2">Demo Video</h2>
           <YoutubeEmbed embedId="uFEGPA43bcU" />
         </div>
       </main>
       <hr className="breakLine"/>
       <footer>
-        <h2>Acknowledgements</h2>
+        <h2 className="center-h2">Acknowledgements</h2>
+        <p>We would like to thank...</p>
       </footer>
+      <p className="copyright">Copyright (c) 2022 Jamila Aliyeva, Manya Jain, Annie Liu, and Amy Nguyen</p>
     </div>
   );
 }

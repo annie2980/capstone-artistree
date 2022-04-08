@@ -18,7 +18,8 @@ export default function OurTeam() {
               <div className="card-item" id="profile">
                 <img src="img/mj.png" alt="Manya Jain" />
                 <h2 className="name">Manya Jain</h2>
-                <p className="card-content">Product Manager & UI/UX Designer</p>
+                <p className="card-content">Product Manager &</p>
+                <p className="card-content">UI/UX Designer</p>
                 <p className="card-content">mjain01@uw.edu</p>
               </div>
 

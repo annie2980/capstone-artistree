@@ -32,7 +32,7 @@ function App(props) {
     </header>
 
     {/* Mobile/Tablet screen navbar FIX */}
-    <nav className="navbar">
+    {/*<nav className="navbar">
     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Menu
       </a>
@@ -42,7 +42,7 @@ function App(props) {
         <NavLink to='/stories' className="nav-link dropdown-item" activeClassName={"activeLink"}>STORIES</NavLink>
         <NavLink to='/our_team' className="nav-link dropdown-item" activeClassName={"activeLink"}>OUR TEAM</NavLink>
       </div>
-    </nav>
+    </nav>*/}
 
     <Switch>
       <Route exact path="/" component={HomePage} />

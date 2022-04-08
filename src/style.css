@@ -15,6 +15,15 @@ body {
   margin-right: auto;
 }
 
+footer {
+  padding-bottom: 50px;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -39,6 +48,11 @@ h2 {
   background-color: white;
   z-index:1;
   border-bottom: 2px solid black;
+}
+
+.center-h2 {
+  text-align: center;
+  margin-top: 40px;
 }
 
 .name {
@@ -67,6 +81,13 @@ p {
   padding: 0;
 }
 
+.about-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
 .nav-link {
   color: black;
   font-family: 'Italiana', serif;
@@ -86,6 +107,7 @@ p {
   width: 90%;
   color: black;
   border-top: 1px solid;
+  align-self: center;
 }
 
 .container .tabContent {
@@ -107,6 +129,12 @@ p {
   position: absolute;
   z-index:0;
   display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -117,49 +145,14 @@ p {
   .header {
     text-align: center;
   }
-
-  .searchBox {
-    text-align: right;
-  }
 }
 
 @media (min-width: 992px) {
-   .navbar {
-    display: none;
-  }
-
-  .searchBox {
-    display: none;
-  }
+  .navbar {
+   display: none;
+ }
 
   .fas, .far {
     display: none;
   }
-}
-
-.logo {
-  display: block;
-  margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  height: 90%;
-}
-
-.login-word {
-  font-size: 2rem;
-  font-weight: 200;
-  text-align: center;
-}
-
-.signin-button {
-  color: #AECE94;
-}
-
-.splash-screen img {
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  display: block;
-  justify-content: center;
 }
