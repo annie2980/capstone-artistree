@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+<<<<<<< HEAD
 import { Route, Switch, Redirect, Link, BrowserRouter, NavLink} from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Image } from 'react-bootstrap';
 import { BsPinFill } from "react-icons/bs";
@@ -6,6 +7,86 @@ import HomePage from './component/Home';
 import AboutPage from './component/About';
 import UserStories from './component/Stories';
 import OurTeam from './component/Team';
+=======
+import { Route, Switch, Redirect, Link } from 'react-router-dom';
+import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material'
+import { HomeOutlined, SearchOutlined, ChatBubbleOutline, PersonOutline } from '@mui/icons-material'
+import SplashScreen from './component/onboarding/SplashScreen';
+import Auth from './component/auth/Auth';
+import Post from './component/Post';
+import Profile from './component/Profile';
+import SupportFeed from './component/SupportFeed';
+import ImageUpload from '../src/component/imageUpload/ImageUpload';
+import {db, auth, logoutUser} from '../src/database/firebase'
+
+function App() {
+  const [posts, setPosts] = useState([]);
+  const [user, setUser] = useState(null);
+
+
+  useEffect(() => {
+    // listens to auth-based changes
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // user has logged in
+        console.log(authUser);
+        setUser(authUser);
+        // function to keep the user logged in
+      } else {
+        // user has logged out
+        setUser(null);
+      }
+    });
+  }, [user]);
+
+  useEffect(() => {
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setPosts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            post: doc.data(),
+          }))
+        );
+      });
+  }, []);
+
+  let content = null
+
+  if (user == null) { // if logged out, show login form
+    content = (
+      <Auth />
+      // <SplashScreen />
+    )
+  } else {
+    content = (
+      <div>
+        <main>
+          <div>
+            <Switch>
+              <Route exact path="/feed"> <SupportFeed auth={auth} posts={posts}/> </Route>
+              <Route path="/profile"> <Profile auth={auth} /> </Route>
+              <Redirect to="/feed" />
+            </Switch>
+          </div>
+        </main>
+        <div>
+        <button
+              className="comment__button text__button"
+              onClick={logoutUser}
+              type="submit"
+            >
+              Logout
+            </button>
+        </div>
+        <div> 
+          <NavigationBar />
+        </div>
+      </div>
+    )
+  }
+>>>>>>> 880525f2f7a2f9df8cae3dcc87b87eb6b6b3252a
 
 function App(props) {
   return (
